@@ -13,24 +13,24 @@ import org.junit.Test;
  * </p>
  * <p> You can think of def as an alias of Object and you will understand it in an instant.
  </p>
- * 
- * 
+ *
+ *
  */
-class VariableDefinition extends GroovyTestCase{
+class VariableDefinition extends GroovyTestCase {
 	@Test
 	void test0_Simple() {
 		String x
 		def obj
-		assert x==null
-		assert obj==null
+		assert x == null
+		assert obj == null
 	}
 
 	@Test
 	void test1_Multiple() {
-		def a,b,c
-		String x,y,z
-		assert a==null && b==null && c==null
-		assert x==null && y==null && z==null
+		def a, b, c
+		String x, y, z
+		assert a == null && b == null && c == null
+		assert x == null && y == null && z == null
 	}
 
 	@Test
@@ -49,20 +49,20 @@ class VariableDefinition extends GroovyTestCase{
 		def o
 		boolean b
 		int i
-		assert o==null;
-		assert !b;
-		assert i==0;
+		assert o == null;
+		assert b != null && !b;
+		assert i != null && i == 0;
 	}
-	
+
 	/**
 	 * Free-Variables for Closure will be rewrite to  by groovy compiler.  
 	 */
 	@Test
 	void test3_Local_InitialValue_Reference() {
-		int i,j
-		assert i==0 && i!=null;
-		assert j==null && j!=0;
-		def closure={j++}
-		shouldFail(NullPointerException,closure)
+		int i, j
+		assert i != null && i == 0;
+		assert j == null;
+		def closure = {j++}
+		shouldFail(NullPointerException, closure)
 	}
 }

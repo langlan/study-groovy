@@ -1,12 +1,11 @@
 package langlan.study.groovy.closure;
 
-import static org.junit.Assert.assertEquals;
-
+import langlan.study.groovy.closure.JInnerClassTest.Level1.Level2;
+import langlan.study.groovy.closure.JInnerClassTest.Level1.Level2.Level3;
 import org.junit.Assert;
 import org.junit.Test;
 
-import langlan.study.groovy.closure.JInnerClassTest.Level1.Level2;
-import langlan.study.groovy.closure.JInnerClassTest.Level1.Level2.Level3;
+import static org.junit.Assert.assertEquals;
 
 public class JInnerClassTest {
 	class Level1 {

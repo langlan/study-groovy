@@ -5,7 +5,7 @@ import groovy.transform.TypeChecked
 import org.junit.Test
 
 /**
- * <b>Principles</b><br/>
+ * <a href="http://www.groovy-lang.org/semantics.html#type-inference"><b>Type-Inference</b></a><br/>
  * When code is annotated with @TypeChecked, the compiler performs type inference.
  * It doesn’t simply rely on static types, but also uses various techniques to infer the types of variables, return types, literals, …​
  * so that the code remains as clean as possible even if you activate the type checker. e.g. {@link TypeInference#testInference()}<p>

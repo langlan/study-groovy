@@ -4,9 +4,9 @@ import org.junit.Test
 
 class IDEAProblems {
 	/**
-	 * Inffered type of charA is Character, But inffered type of quoted expression ('a' as char) seems like primary type char.
-	 * @TODO: So It's IDEA's problem or just a diference from groovy inffer strategies.
- 	 */
+	 * Inffered type of <code>charA</code> is Character, But inffered type of quoted expression <code>('a' as char)</code> seems like primary type char.
+	 * @TODO: So It's IDEA's problem or just diferences come from groovy inffer strategies?
+	 */
 	@Test
 	void testAsChar() {
 		def charA = 'a' as char
